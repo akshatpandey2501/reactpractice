@@ -18,21 +18,40 @@ import ReactDOM from "react-dom";
 //   document.getElementById("root")
 // );
 //intro to styles implementation
-var a = 15;
-const customStyle = {
-  color: " "
-};
-var n = " ";
-const date = new Date(2019, 1, 1, a);
-if (a > 0 && a < 12) {
-  n = "goodmorning";
-  customStyle.color = "red";
-}
-if (a > 12 && a < 16) {
-  n = "goodevening";
-  customStyle.color = "blue";
+// var a = 15;
+// const customStyle = {
+//   color: " "
+// };
+// var n = " ";
+// const date = new Date(2019, 1, 1, a);
+// if (a > 0 && a < 12) {
+//   n = "goodmorning";
+//   customStyle.color = "red";
+// }
+// if (a > 12 && a < 16) {
+//   n = "goodevening";
+//   customStyle.color = "blue";
+// }
+// ReactDOM.render(
+//   <h1 style={customStyle}> {n}</h1>,
+//   document.getElementById("root")
+// );
+// react props practice
+function Card(props) {
+  return (
+    <div>
+      <h1>{props.name}</h1>
+      <p>{props.email}</p>
+      <p>{props.tell}</p>
+    </div>
+  );
 }
 ReactDOM.render(
-  <h1 style={customStyle}> {n}</h1>,
+  <div>
+    <Card name="bnhgfhf" tell="78798799" email="fgdhgfhkgjg" />
+    <Card name="bnhgfhf" tell="787987987" email="hfsjhgjg" />
+    <Card name="zdasm," tell="7644653636" email="zgfddjj" />
+  </div>,
   document.getElementById("root")
 );
+// IMP : in functioncard c should be capital
