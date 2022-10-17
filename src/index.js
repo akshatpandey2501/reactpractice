@@ -1,5 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom";
+
+const contact = [
+  {
+    id: 1,
+    name: "akshat",
+    tell: "5786786876",
+    email: "fghghf"
+  },
+  {
+    id: 2,
+    name: "divyanshu",
+    tell: "467697676",
+    email: "fkjgyf"
+  },
+  {
+    id: 3,
+    name: "utkarsh",
+    tell: "467697676",
+    email: "fkjgyf"
+  }
+];
+
 //intro to jsx
 // ReactDOM.render(
 //   <div>
@@ -37,21 +59,41 @@ import ReactDOM from "react-dom";
 //   document.getElementById("root")
 // );
 // react props practice
-function Card(props) {
+// mapping completed
+function Card(props){
   return (
     <div>
-      <h1>{props.name}</h1>
-      <p>{props.email}</p>
+       
+      <h2>{props.name}</h2>
       <p>{props.tell}</p>
+      <p>{props.email}</p>
     </div>
-  );
+  )
 }
+function Create(contact) {
+  return <Card name={contact.name} tell={contact.tell} email={contact.email} />;
+}
+function App() {
+  return(
+    <div>
+  {contact.map(Create)}
+  </div>)
+  }
+
+
 ReactDOM.render(
   <div>
-    <Card name="bnhgfhf" tell="78798799" email="fgdhgfhkgjg" />
-    <Card name="bnhgfhf" tell="787987987" email="hfsjhgjg" />
-    <Card name="zdasm," tell="7644653636" email="zgfddjj" />
+    <App/>
   </div>,
   document.getElementById("root")
 );
+
+// ReactDOM.render(
+//   <div>
+//     <Card name="bnhgfhf" tell="78798799" email="fgdhgfhkgjg" />
+//     <Card name="bnhgfhf" tell="787987987" email="hfsjhgjg" />
+//     <Card name="zdasm," tell="7644653636" email="zgfddjj" />
+//   </div>,
+//   document.getElementById("root")
+// );
 // IMP : in functioncard c should be capital
